@@ -47,5 +47,6 @@ A continuación se deben seguir esto pasos para configurar cypress:
 - 3-) Para correr las pruebas ejecute el siguiente comando
 - - cypress run
 - - Esto correra las pruebas y mostrara los resultados en consola
+- 4-) Podrá ver cuáles escenarios fueron exitosos, y posteriormente, desde un explorador de archivos podrá ver el directorio videos y el directorio screenshots, donde se guardan las capturas realizadas durante la prueba (en este caso, ninguna). El video que se genera es una grabación de lo que usted vería en el navegador si se ejecutara en modo headed.
 
 
