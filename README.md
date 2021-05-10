@@ -28,7 +28,7 @@ Para configurar el ambiente de esta aplicación es necesario que tenga instalado
 ghost start
 Este ejecutará la aplicación y en la consola mostrar en que puerto podrá verla de modo local. Como ejemplo de la URL:
 
-http://localhost:2370/ghost/
+- - http://localhost:2370/ghost/
 
 4-) verifique que la aplicación se puede ver de forma local de no ser así verifique los pasos anteriores
 
