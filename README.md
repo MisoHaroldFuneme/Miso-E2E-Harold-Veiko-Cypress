@@ -14,8 +14,6 @@ Proyecto en el que se ejecutaran escenarios en la aplicación Ghost con la herra
 - Tag
 - Settings General
 
-## Descripción de los Escenarios de prueba
-
 
 ## Instrucciones para ejecutar la aplicación Ghost
 
@@ -33,8 +31,6 @@ Este ejecutará la aplicación y en la consola mostrar en que puerto podrá verl
 http://localhost:2370/ghost/
 
 4-) verifique que la aplicación se puede ver de forma local de no ser así verifique los pasos anteriores
-
-## Instrucciones para ejecutar los escenarios en Kraken
 
 
 ## Instrucciones para ejecutar los escenarios en Cypress
