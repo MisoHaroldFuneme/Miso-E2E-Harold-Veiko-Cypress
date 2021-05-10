@@ -3,7 +3,7 @@
 Proyecto en el que se ejecutaran escenarios en la aplicación Ghost con la herramienta Cypress con el fin de contrastar sus utilidades frente a la herramienta Kraken
 
 
-## Funcionalidades bajo prueba:
+## Descripción de las Funcionalidades bajo prueba:
 
 - Post
 - Page
