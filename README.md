@@ -35,3 +35,17 @@ http://localhost:2370/ghost/
 
 ## Instrucciones para ejecutar los escenarios en Cypress
 
+A continuación se deben seguir esto pasos para configurar cypress:
+
+- 1-) Instale la versión de node v12.20.1 en el siguiente enlace podra encontrar esta versión
+- - https://nodejs.org/en/blog/release/v12.20.1/
+- - Asegurese de contar con esta version ejecutando el comando < node -v > de no tener esta versión las pruebas pueden fallar
+- - IMPORTANTE! tener esta versión de node para poder ejecutar el proyecto
+- 2-) abra una terminal y ejecute el siguiente comando:
+- - npm install -g cypress
+- - Nota: el comando de instalación global puede ser ejecutado desde cualquier ubicación en el esquema de archivos de su máquina. En caso de que desee instalarlo únicamente para su proyecto, omita el flag -g y asegúrese de ejecutar el comando en el directorio de su proyecto luego de inicializarlo.
+- 3-) Para correr las pruebas ejecute el siguiente comando
+- - cypress run
+- - Esto correra las pruebas y mostrara los resultados en consola
+
+
