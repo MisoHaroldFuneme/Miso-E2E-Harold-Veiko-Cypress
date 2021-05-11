@@ -28,10 +28,25 @@ Para configurar el ambiente de esta aplicación es necesario que tenga instalado
 ghost start
 Este ejecutará la aplicación y en la consola mostrar en que puerto podrá verla de modo local. Como ejemplo de la URL:
 
-http://localhost:2370/ghost/
+- - http://localhost:2370/ghost/
 
 4-) verifique que la aplicación se puede ver de forma local de no ser así verifique los pasos anteriores
 
 
 ## Instrucciones para ejecutar los escenarios en Cypress
+
+A continuación se deben seguir esto pasos para configurar cypress:
+
+- 1-) Instale la versión de node v12.20.1 en el siguiente enlace podra encontrar esta versión
+- - https://nodejs.org/en/blog/release/v12.20.1/
+- - Asegurese de contar con esta version ejecutando el comando < node -v > de no tener esta versión las pruebas pueden fallar
+- - IMPORTANTE! tener esta versión de node para poder ejecutar el proyecto
+- 2-) abra una terminal y ejecute el siguiente comando:
+- - npm install -g cypress
+- - Nota: el comando de instalación global puede ser ejecutado desde cualquier ubicación en el esquema de archivos de su máquina. En caso de que desee instalarlo únicamente para su proyecto, omita el flag -g y asegúrese de ejecutar el comando en el directorio de su proyecto luego de inicializarlo.
+- 3-) Para correr las pruebas ejecute el siguiente comando
+- - cypress run
+- - Esto correra las pruebas y mostrara los resultados en consola
+- 4-) Podrá ver cuáles escenarios fueron exitosos, y posteriormente, desde un explorador de archivos podrá ver el directorio videos y el directorio screenshots, donde se guardan las capturas realizadas durante la prueba (en este caso, ninguna). El video que se genera es una grabación de lo que usted vería en el navegador si se ejecutara en modo headed.
+
 
