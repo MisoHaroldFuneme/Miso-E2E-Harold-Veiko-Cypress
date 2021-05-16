@@ -20,7 +20,7 @@ context('Testing Create Post', () => {
         cy.wait(7000)
     })
 
-    it('Test Page crear post', () => {
+    it('Test Page create post', () => {
         cy.get('a[href*="#/post"]').first().click()
         cy.wait(4000)  
     })
@@ -35,8 +35,9 @@ context('Testing Create Post', () => {
         cy.wait(2000)
     });    
    
+   
     it('Button Back to page', () => {
-        cy.go('back')
+        cy.get('a[href*="#/posts"]').first().click({force: true})
     })
      
 })
