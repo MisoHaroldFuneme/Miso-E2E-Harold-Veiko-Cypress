@@ -1,5 +1,8 @@
 {
     "projectId":"Miso-E2E-Harold-Veiko-Cypress",
      "chromeWebSecurity": false,
-     "modifyObstructiveCode": true
+     "modifyObstructiveCode": true,
+     "baseUrl" : "http://localhost:2380/ghost/",
+     "user" : "misoharoldfuneme@gmail.com",
+     "password" : "Miso-pruebas%"
 }
