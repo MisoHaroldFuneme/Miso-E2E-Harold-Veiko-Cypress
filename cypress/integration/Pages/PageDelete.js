@@ -1,5 +1,6 @@
 const cookieSessionName = Cypress.env('cookieSessionName') || "ghost-admin-api-session"
-
+var i = 0;
+var caso = 2;
 
 describe('Testing delete Page', () => {
 
@@ -10,6 +11,7 @@ describe('Testing delete Page', () => {
 
      beforeEach(() => {        
         Cypress.Cookies.preserveOnce(cookieSessionName);
+        i = i +1;
     })
 
     after( () => {
@@ -20,20 +22,29 @@ describe('Testing delete Page', () => {
         cy.get('input[id="ember8"]').type(Cypress.config('user'));
         cy.get('input[name="password"]').type(Cypress.config('password'));
         cy.get('[id="ember12"]').click();
-        cy.wait(1000);
+        cy.wait(3000);
+        cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
 
     it('Test go to page', () =>{
-        cy.get('a[href*="#/pages/"]').click();
+        cy.get('a[href*="#/pages/"]').first().click();
         cy.wait(2000);
-        cy.get('li[class="gh-list-row gh-posts-list-item ember-view"]').click();
-        cy.wait(1000);
+
+        cy.get('li.gh-list-row.gh-posts-list-item').first().within(() => 
+        {
+            cy.get('a[href*="#/editor/page/"]').first().click({force: true})
+        })
+        // cy.get('li[class="gh-list-row gh-posts-list-item ember-view"]').click();
+        cy.wait(3000);
+        cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
     
     it('Test click post-settings and delete', () => {
-        cy.get('button[class="gh-btn gh-btn-hover-red gh-btn-icon settings-menu-delete-button"]').first().click();
+        cy.get('button[class="gh-btn gh-btn-hover-red gh-btn-icon settings-menu-delete-button"]').click();
         cy.wait(1000)
         cy.get('button[class="gh-btn gh-btn-red gh-btn-icon ember-view"]').click();
+        cy.wait(3000);
+        cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
    
   })
