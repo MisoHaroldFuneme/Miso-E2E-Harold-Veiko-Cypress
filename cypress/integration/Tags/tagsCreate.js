@@ -46,8 +46,8 @@ context('Testing Create Tag', () => {
         cy.get('button.gh-btn.gh-btn-blue.gh-btn-icon.ember-view').first().click({force: true})
     })
    
-    // it('Button Back to page', () => {
-    //     cy.get('a[href*="#/posts"]').click()
-    // })
+    it('Button Back to page', () => {
+         cy.get('a[href*="#/tags"]').first().click()
+    })
      
 })
