@@ -29,12 +29,8 @@ context('Testing Edit Tag', () => {
 
     it('Test Page edit tag', () => {
         cy.get('a[href*="#/tags/"]').first().click()
-<<<<<<< HEAD
         cy.wait(2000)  
         cy.screenshot(`caso${caso}/Step-After-${i}`);
-=======
-        cy.wait(4000)  
->>>>>>> 4412e0ed4c5697739d2b90342878e042baf97cf7
     })
 
     it('edit first tag', () => {        
