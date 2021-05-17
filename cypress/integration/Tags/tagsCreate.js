@@ -21,17 +21,17 @@ context('Testing Create Tag', () => {
         cy.get('input[name="identification"]').type(Cypress.config('user'))
         cy.get('input[name="password"]').type(Cypress.config('password'))
         cy.get('[id="ember12"]').click()
-        cy.wait(7000)
+        cy.wait(2000)
     })
 
     it('Test Page create tag', () => {
         cy.get('a[href*="#/tags"]').first().click()
-        cy.wait(4000)  
+        cy.wait(2000)  
     })
 
     it('Button new tag', () => {
         cy.get('a[href*="#/tags/new"]').first().click()
-        cy.wait(4000) 
+        cy.wait(2000) 
     })
 
     it('Enter Name and Description', () => {  
@@ -44,11 +44,10 @@ context('Testing Create Tag', () => {
    
     it('press Save', () => {
         cy.get('button.gh-btn.gh-btn-blue.gh-btn-icon.ember-view').first().click({force: true})
-        cy.wait(4000)
     })
    
-    it('Button Back to page', () => {
-        cy.get('a[href*="#/tags"]').first().click({force: true})
-    })
+    // it('Button Back to page', () => {
+    //     cy.get('a[href*="#/posts"]').click()
+    // })
      
 })
