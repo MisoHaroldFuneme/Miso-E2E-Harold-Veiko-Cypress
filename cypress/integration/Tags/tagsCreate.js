@@ -53,8 +53,8 @@ context('Testing Create Tag', () => {
         cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
    
-    // it('Button Back to page', () => {
-    //     cy.get('a[href*="#/posts"]').click()
-    // })
+    it('Button Back to page', () => {
+         cy.get('a[href*="#/tags"]').first().click()
+    })
      
 })
