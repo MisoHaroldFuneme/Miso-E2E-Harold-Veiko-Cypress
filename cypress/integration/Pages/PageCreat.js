@@ -1,21 +1,24 @@
 const cookieSessionName = Cypress.env('cookieSessionName') || "ghost-admin-api-session"
 
 
-context('Testing Page features', () => {
-    const PAGE_URL = "http://localhost:2368/ghost/#/signin";
+describe('Testing Page features', () => {
 
     before(()=>{
-        cy.visit(PAGE_URL);
-         cy.wait(3000);
+        cy.visit('/#/signin')
+        cy.wait(3000);
      })
 
      beforeEach(() => {        
         Cypress.Cookies.preserveOnce(cookieSessionName);
     })
 
+    after( () => {
+        cy.clearCookies();
+    })
+
     it('Test Login into', () => {
-        cy.get('input[id="ember8"]').type('misoharoldfuneme@gmail.com');
-        cy.get('input[name="password"]').type('Miso-pruebas%');
+        cy.get('input[id="ember8"]').type(Cypress.config('user'));
+        cy.get('input[name="password"]').type(Cypress.config('password'));
         cy.get('[id="ember12"]').click();
         cy.wait(3000);
     })
@@ -30,5 +33,5 @@ context('Testing Page features', () => {
         cy.get('textarea').first().type("New Title page");
         // Falta ver como resolver el tema de los dos _ _ que aparecen al guardar o recargar la pagina
     })
-
+   
   })

@@ -13,6 +13,10 @@ context('Testing Delete Post', () => {
         Cypress.Cookies.preserveOnce(cookieSessionName);
     })
 
+    after( () => {
+        cy.clearCookies();
+    })
+
     it('Login General', () => {
         cy.get('input[name="identification"]').type(Cypress.config('user'))
         cy.get('input[name="password"]').type(Cypress.config('password'))
