@@ -1,7 +1,7 @@
 const cookieSessionName = Cypress.env('cookieSessionName') || "ghost-admin-api-session"
 
 
-describe('Testing create Page', () => {
+describe('Testing delete Page', () => {
 
     before(()=>{
         cy.visit('/#/signin')
@@ -20,22 +20,20 @@ describe('Testing create Page', () => {
         cy.get('input[id="ember8"]').type(Cypress.config('user'));
         cy.get('input[name="password"]').type(Cypress.config('password'));
         cy.get('[id="ember12"]').click();
-        cy.wait(3000);
+        cy.wait(1000);
     })
 
-    it('Test go to page and new page', () =>{
+    it('Test go to page', () =>{
         cy.get('a[href*="#/pages/"]').click();
         cy.wait(2000);
-        cy.get('a[class="gh-btn gh-btn-green ember-view"]').click();
+        cy.get('li[class="gh-list-row gh-posts-list-item ember-view"]').click();
+        cy.wait(1000);
     })
     
-    it('Test type title and content', () => {
-        cy.get('textarea').first().type("New Title page");
-    })
-
-    it('Button Back to page', () => {
-        cy.get('a[href*="#/pages/"]').first().click({force: true})
-        cy.get('a[href*="#/pages/"]').first().click({force: true})
+    it('Test click post-settings and delete', () => {
+        cy.get('button[class="gh-btn gh-btn-hover-red gh-btn-icon settings-menu-delete-button"]').first().click();
+        cy.wait(1000)
+        cy.get('button[class="gh-btn gh-btn-red gh-btn-icon ember-view"]').click();
     })
    
   })
