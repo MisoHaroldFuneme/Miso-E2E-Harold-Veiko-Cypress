@@ -3,7 +3,7 @@ const cookieSessionName = Cypress.env('cookieSessionName') || "ghost-admin-api-s
 
 
 context('Testing Create Post', () => { 
-    
+
     before(() => {
         cy.visit('/#/signin')
         cy.wait(3000)
@@ -11,6 +11,10 @@ context('Testing Create Post', () => {
 
     beforeEach(() => {        
         Cypress.Cookies.preserveOnce(cookieSessionName);
+    })
+
+    after( () => {
+        cy.clearCookies();
     })
 
     it('Login General', () => {
