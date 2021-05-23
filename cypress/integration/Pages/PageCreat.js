@@ -23,7 +23,7 @@ describe('Testing create Page', () => {
         cy.get('input[name="password"]').type(Cypress.config('password'));
         cy.get('[id="ember12"]').click();
         cy.wait(3000);
-        cy.screenshot(`caso${caso}/Step-After-${i}`);
+        // cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
 
     it('Test go to page and new page', () =>{
@@ -31,21 +31,21 @@ describe('Testing create Page', () => {
         cy.wait(2000);
         cy.get('a[class="ember-view gh-btn gh-btn-green"]').click();
         cy.wait(3000);
-        cy.screenshot(`caso${caso}/Step-After-${i}`);
+        // cy.screenshot(`caso${caso}/Step-After-${i}`);
         
     })
     
     it('Test type title and content', () => {
         cy.get('textarea').first().type("Title page");
         cy.wait(3000);
-        cy.screenshot(`caso${caso}/Step-After-${i}`);
+        // cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
 
     it('Button Back to page', () => {
         cy.get('a[href*="#/pages/"]').first().click({force: true})
         cy.get('a[href*="#/pages/"]').first().click({force: true})
         cy.wait(3000);
-        cy.screenshot(`caso${caso}/Step-After-${i}`);
+        // cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
    
   })

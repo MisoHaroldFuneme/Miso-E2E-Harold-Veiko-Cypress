@@ -24,13 +24,13 @@ context('Testing Edit Post', () => {
         cy.get('input[name="password"]').type(Cypress.config('password'))
         cy.get('[id="ember12"]').click()
         cy.wait(2000)
-        cy.screenshot(`caso${caso}/Step-After-${i}`);
+        // cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
 
     it('Test Page edit post', () => {
         cy.get('a[href*="#/post"]').first().click()
         cy.wait(2000)  
-        cy.screenshot(`caso${caso}/Step-After-${i}`);
+        // cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
 
     it('edit first post', () => {
@@ -39,19 +39,19 @@ context('Testing Edit Post', () => {
             cy.get('a[href*="#/editor/post/"]').first().click({force: true})
         })
         cy.wait(2000) 
-        cy.screenshot(`caso${caso}/Step-After-${i}`);
+        // cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
 
     it('Enter Title', () => {
         cy.get('textarea').first().clear()
         cy.get('textarea').first().type("Edit Title post");
         cy.wait(2000)
-        cy.screenshot(`caso${caso}/Step-After-${i}`);
+        // cy.screenshot(`caso${caso}/Step-After-${i}`);
     });    
    
     it('Button Back to page', () => {
         cy.get('a[href*="#/posts/"]').first().click({force: true})
-        cy.screenshot(`caso${caso}/Step-After-${i}`);
+        // cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
      
 })
