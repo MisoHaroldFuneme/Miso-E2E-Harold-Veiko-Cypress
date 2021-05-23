@@ -41,7 +41,7 @@ context('Testing Create Tag', () => {
 
     it('Enter Name and Description', () => {  
         cy.get('form').within(() => {
-        cy.get('input[name="name"]').type("New tag", { force: true })
+        cy.get('input[name="name"]').type("A New tag", { force: true })
         cy.get('textarea[name="description"]').type("Description of new tag", { force: true })
         cy.wait(2000)
         // cy.screenshot(`caso${caso}/Step-After-${i}`);

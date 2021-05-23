@@ -3,7 +3,7 @@ const cookieSessionName = Cypress.env('cookieSessionName') || "ghost-admin-api-s
 var i = 0;
 var caso = 8;
 
-context('Testing Edit Tag', () => { 
+context('Testing Delete Tag', () => { 
     
     before(() => {
         cy.visit('/#/signin')
@@ -38,19 +38,11 @@ context('Testing Edit Tag', () => {
         cy.wait(2000) 
         // cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
-
-     it('Enter new Name and Description', () => {  
-         cy.get('form').within(() => {
-             cy.get('input[name="name"]').first().clear({ force: true });
-             cy.get('input[name="name"]').first().type("A New Name Edited in tag", { force: true });
-             cy.get('textarea[name="description"]').first().clear( { force: true } )
-             cy.get('textarea[name="description"]').first().type("New Description Edited in tag", { force: true })
-             cy.wait(2000)
-         })
-     });
    
-    it('press Save', () => {
-        cy.get('button.gh-btn.gh-btn-blue.gh-btn-icon.ember-view').first().click({force: true})
+    it('press Delete tag', () => {
+        cy.get('button.gh-btn.gh-btn-red.gh-btn-icon.mb15').first().click({force: true})
+        cy.wait(2000)
+        cy.get('button.gh-btn.gh-btn-red.gh-btn-icon.ember-view').first().click({force: true})
         cy.wait(2000)
         // cy.screenshot(`caso${caso}/Step-After-${i}`);
     })

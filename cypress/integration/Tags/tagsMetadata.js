@@ -3,7 +3,7 @@ const cookieSessionName = Cypress.env('cookieSessionName') || "ghost-admin-api-s
 var i = 0;
 var caso = 8;
 
-context('Testing Edit Tag', () => { 
+context('Testing Edit Tag, Enter Metadata', () => { 
     
     before(() => {
         cy.visit('/#/signin')
