@@ -2,7 +2,7 @@ const cookieSessionName = Cypress.env('cookieSessionName') || "ghost-admin-api-s
 var i = 0;
 var caso = 4;
 
-context('Testing Create Post', () => { 
+context('Testing Create Post and Publish', () => { 
 
     before(() => {
         cy.visit('/#/signin');
@@ -39,14 +39,15 @@ context('Testing Create Post', () => {
     })
 
     it('Enter Title', () => {
-        cy.get('textarea').first().type("New Title post", tab);
-        cy.get('textarea').tab();
-        cy.wait(4000);
+        cy.get('textarea').first().type("New Title post");
+        cy.wait(1000);
+        cy.get('.gh-koenig-editor-pane').click();
+        cy.wait(2000);
         //cy.screenshot(`caso${caso}/Step-After-${i}`);
     });       
    
-    it('Publish', () => {
-        cy.get('.gh-publishmenu ember-view').click({force: true});
+    it('Publish', () => {        
+        cy.get('div[role="button"]').first().click({force: true});
         cy.wait(2000);
         cy.get('button[class="gh-btn gh-btn-blue gh-publishmenu-button gh-btn-icon ember-view"]').click();
         cy.wait(2000);
