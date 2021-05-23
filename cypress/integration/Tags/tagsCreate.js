@@ -6,7 +6,7 @@ var caso = 7;
 context('Testing Create Tag', () => { 
     
     before(() => {
-        cy.visit('/#/signin')
+        cy.visit('/')
         cy.wait(3000)
     })
 
@@ -53,11 +53,11 @@ context('Testing Create Tag', () => {
         // cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
    
-    it('Button Back to site', () => {
-        cy.get('a[href*="#/site/"]').first().click({force: true})
-        cy.get('a[href*="#/site/"]').first().click({force: true})
-        cy.wait(3000);
-        // cy.screenshot(`caso${caso}/Step-After-${i}`);
-    })
+    // it('Button Back to site', () => {
+    //     cy.get('a[href*="#/site/"]').first().click({force: true})
+    //     cy.get('a[href*="#/site/"]').first().click({force: true})
+    //     cy.wait(3000);
+    //     // cy.screenshot(`caso${caso}/Step-After-${i}`);
+    // })
      
 })

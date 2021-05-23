@@ -4,5 +4,6 @@
      "modifyObstructiveCode": true,
      "baseUrl" : "http://localhost:2368/ghost/#/signin",
      "user" : "misoharoldfuneme@gmail.com",
-     "password" : "Miso-pruebas%"
+     "password" : "Miso-pruebas%",
+     "experimentalSourceRewriting": true
 }

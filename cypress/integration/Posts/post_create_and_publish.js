@@ -38,21 +38,21 @@ context('Testing Create Post and Publish', () => {
         //cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
 
-    it('Enter Title', () => {
+    it('Test Enter Title', () => {
         cy.get('textarea').first().type("New Title post");
         cy.wait(1000);
         cy.get('a[href*="#/posts/"]').first().click({force: true});
-        // cy.get('.gh-koenig-editor-pane').click();
         cy.wait(2000);
         //cy.screenshot(`caso${caso}/Step-After-${i}`);
     });       
    
-    it('Publish', () => {        
+    it('Test Publish', () => {        
         cy.get('div[role="button"]').first().click({force: true});
         cy.wait(2000);
         
         cy.get('button[class="gh-btn gh-btn-blue gh-publishmenu-button gh-btn-icon ember-view"]').click();
         cy.wait(2000);
+        cy.get('div[class="f8 fw3 lh-copy tracked-2 ma0 pa0 h9 br b--lightgrey pl3 pr4 flex items-center br2 br--left bg-white"]').click();
         //cy.screenshot(`caso${caso}/Step-After-${i}`);
         cy.get('div[class="f8 fw3 lh-copy tracked-2 ma0 pa0 h9 br b--lightgrey pl3 pr4 flex items-center br2 br--left bg-white"]').click();
     });       
