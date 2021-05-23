@@ -1,4 +1,3 @@
-
 const cookieSessionName = Cypress.env('cookieSessionName') || "ghost-admin-api-session"
 var i = 0;
 var caso = 4;
@@ -43,8 +42,7 @@ context('Testing Create Post', () => {
         cy.get('textarea').first().type("New Title post");
         cy.wait(2000)
         cy.screenshot(`caso${caso}/Step-After-${i}`);
-    });    
-   
+    });       
    
     it('Button Back to page', () => {
         cy.get('a[href*="#/posts"]').first().click({force: true})

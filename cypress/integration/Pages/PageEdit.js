@@ -47,14 +47,7 @@ context('Testing Edit Page', () => {
         cy.get('textarea').first().type("New Title page");
         cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
-
    
-    it('Test click update  page', () => { 
-        cy.get('div[class="gh-btn gh-btn-outline gh-publishmenu-trigger ember-basic-dropdown-trigger ember-view"]').click()
-        cy.get('button[class="gh-btn gh-btn-blue gh-publishmenu-button gh-btn-icon ember-view"]').click()
-        cy.screenshot(`caso${caso}/Step-After-${i}`);
-    })
-
     it('Button Back to page', () => {
         cy.get('a[href*="#/pages/"]').first().click({force: true})
         cy.get('a[href*="#/pages/"]').first().click({force: true})
