@@ -2,7 +2,7 @@ const cookieSessionName = Cypress.env('cookieSessionName') || "ghost-admin-api-s
 var i = 0;
 var caso = 1;
 
-describe('Testing create Page', () => {
+describe('Testing create Publish', () => {
 
     before(()=>{
         cy.visit('/#/signin')
@@ -38,24 +38,26 @@ describe('Testing create Page', () => {
     it('Test type title and content', () => {
         cy.get('textarea').first().type("Title page");
         cy.wait(1000);
-        cy.get('.gh-koenig-editor-pane').click();
+        cy.get('a[href*="#/posts/"]').click();
+        // cy.get('.gh-koenig-editor-pane').click();
         cy.wait(2000);
         // cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
     
-    it('Publish', () => {        
-        cy.get('div[role="button"]').first().click({force: true});
-        cy.wait(2000);
-        cy.get('button[class="gh-btn gh-btn-blue gh-publishmenu-button gh-btn-icon ember-view"]').click();
-        cy.wait(2000);
-        //cy.screenshot(`caso${caso}/Step-After-${i}`);
-    });       
+    // it('Publish', () => {      
+    //     cy.wait(2000);  
+    //     cy.get('div[role="button"]').first().click({force: true});
+    //     cy.wait(2000);
+    //     cy.get('button[class="gh-btn gh-btn-blue gh-publishmenu-button gh-btn-icon ember-view"]').click();
+    //     cy.wait(2000);
+    //     //cy.screenshot(`caso${caso}/Step-After-${i}`);
+    // });       
    
-    it('Button Back to page', () => {
-        cy.get('a[href*="#/pages/"]').first().click({force: true})
-        cy.get('a[href*="#/pages/"]').first().click({force: true})
-        cy.wait(3000);
-        // cy.screenshot(`caso${caso}/Step-After-${i}`);
-    })
+    // it('Button Back to page', () => {
+    //     cy.get('a[href*="#/pages/"]').first().click({force: true})
+    //     cy.get('a[href*="#/pages/"]').first().click({force: true})
+    //     cy.wait(3000);
+    //     // cy.screenshot(`caso${caso}/Step-After-${i}`);
+    // })
    
   })
