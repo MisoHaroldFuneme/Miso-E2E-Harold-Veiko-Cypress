@@ -1,7 +1,6 @@
 const cookieSessionName = Cypress.env('cookieSessionName') || "ghost-admin-api-session"
 var i = 0;
 var caso = 2;
-
 describe('Testing delete Page', () => {
 
     before(()=>{
@@ -43,6 +42,13 @@ describe('Testing delete Page', () => {
         cy.get('button[class="gh-btn gh-btn-hover-red gh-btn-icon settings-menu-delete-button"]').click();
         cy.wait(1000)
         cy.get('button[class="gh-btn gh-btn-red gh-btn-icon ember-view"]').click();
+        cy.wait(3000);
+        // cy.screenshot(`caso${caso}/Step-After-${i}`);
+    })
+
+    it('Button Back to page', () => {
+        cy.get('a[href*="#/pages/"]').first().click({force: true})
+        cy.get('a[href*="#/pages/"]').first().click({force: true})
         cy.wait(3000);
         // cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
