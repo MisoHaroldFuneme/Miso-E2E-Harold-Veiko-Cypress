@@ -27,13 +27,13 @@ context('Testing Create Post and Publish', () => {
     })
 
     it('Test Page create post', () => {
-        cy.get('a[href*="#/post"]').first().click();
+        cy.get('a[href*="#/post"]').first().click({force: true});
         cy.wait(2000);  
         //cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
 
     it('Button new post', () => {
-        cy.get('a[href*="#/editor/post"]').first().click();
+        cy.get('a[href*="#/editor/post"]').first().click({force: true});
         cy.wait(2000);
         //cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
@@ -41,7 +41,8 @@ context('Testing Create Post and Publish', () => {
     it('Enter Title', () => {
         cy.get('textarea').first().type("New Title post");
         cy.wait(1000);
-        cy.get('.gh-koenig-editor-pane').click();
+        cy.get('a[href*="#/posts/"]').first().click({force: true});
+        // cy.get('.gh-koenig-editor-pane').click();
         cy.wait(2000);
         //cy.screenshot(`caso${caso}/Step-After-${i}`);
     });       
@@ -49,9 +50,11 @@ context('Testing Create Post and Publish', () => {
     it('Publish', () => {        
         cy.get('div[role="button"]').first().click({force: true});
         cy.wait(2000);
+        
         cy.get('button[class="gh-btn gh-btn-blue gh-publishmenu-button gh-btn-icon ember-view"]').click();
         cy.wait(2000);
         //cy.screenshot(`caso${caso}/Step-After-${i}`);
+        cy.get('div[class="f8 fw3 lh-copy tracked-2 ma0 pa0 h9 br b--lightgrey pl3 pr4 flex items-center br2 br--left bg-white"]').click();
     });       
    
 

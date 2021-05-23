@@ -39,12 +39,22 @@ context('Testing Edit Tag, Enter Metadata', () => {
         // cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
 
-     it('Enter new Name and Description', () => {  
+    it('press Expand Metadata', () => {
+        cy.get(':nth-child(1) > .flex > :nth-child(2) > .gh-btn > span').first().click({force: true});
+        cy.wait(2000)
+        // cy.screenshot(`caso${caso}/Step-After-${i}`);
+    })
+
+     it('Enter data', () => {  
          cy.get('form').within(() => {
-             cy.get('input[name="name"]').first().clear({ force: true });
-             cy.get('input[name="name"]').first().type("A New Name Edited in tag", { force: true });
-             cy.get('textarea[name="description"]').first().clear( { force: true } )
-             cy.get('textarea[name="description"]').first().type("New Description Edited in tag", { force: true })
+             cy.get('input[name="metaTitle"]').first().clear({ force: true });
+             cy.get('input[name="metaTitle"]').first().type("Título de Metadata", { force: true });
+             cy.get('textarea[name="metaDescription"]').first().clear( { force: true } )
+             cy.get('textarea[name="metaDescription"]').first().type("Descripción de metadata", { force: true });
+             cy.get('#canonical-url').first().clear( { force: true } );
+             cy.get('#canonical-url').first().type("http://canonicaurl.com", { force: true });
+             cy.get('.br3 > :nth-child(1) > :nth-child(1) > :nth-child(2) > .gh-btn > span').first().click({force: true});
+             
              cy.wait(2000)
          })
      });
