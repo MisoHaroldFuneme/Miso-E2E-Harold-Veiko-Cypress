@@ -40,6 +40,7 @@ context('Testing Create Post and Publish', () => {
 
     it('Test Enter Title', () => {
         cy.get('textarea').first().type("New Title post");
+        cy.get('.koenig-editor__editor').type("Hola Mundo");
         cy.wait(1000);
         cy.get('a[href*="#/posts/"]').first().click({force: true});
         cy.wait(2000);

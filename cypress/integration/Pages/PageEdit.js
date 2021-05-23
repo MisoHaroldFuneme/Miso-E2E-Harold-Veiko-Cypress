@@ -45,6 +45,8 @@ context('Testing Edit Page', () => {
     it('Test type title', () => {
         cy.get('textarea').first().clear()
         cy.get('textarea').first().type("New Title page");
+        cy.get('.koenig-editor__editor').clear( { force: true } );
+        cy.get('.koenig-editor__editor').type("Hola 2");
         // cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
    

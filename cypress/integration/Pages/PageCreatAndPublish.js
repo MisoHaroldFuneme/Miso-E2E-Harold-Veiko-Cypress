@@ -37,7 +37,8 @@ describe('Testing Page - Create_And_Publish', () => {
     
     it('Test type title and content', () => {
         cy.get('textarea').first().type("Title page");
-        cy.wait(1000);
+        cy.get('.koenig-editor__editor').type("Hola");
+        cy.wait(2000);
         cy.get('a[href*="#/pages/"]').click();
         cy.wait(2000);
         // cy.screenshot(`caso${caso}/Step-After-${i}`);

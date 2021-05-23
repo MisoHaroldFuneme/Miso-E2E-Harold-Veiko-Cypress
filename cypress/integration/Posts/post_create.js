@@ -40,6 +40,7 @@ context('Testing Create Post', () => {
 
     it('Enter Title', () => {
         cy.get('textarea').first().type("New Title post");
+        cy.get('.koenig-editor__editor').type("Hola Mundo");
         cy.wait(2000)
         // cy.screenshot(`caso${caso}/Step-After-${i}`);
     });    

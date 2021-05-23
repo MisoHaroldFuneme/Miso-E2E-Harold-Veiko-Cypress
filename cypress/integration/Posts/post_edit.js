@@ -45,6 +45,8 @@ context('Testing Edit Post', () => {
     it('Enter Title', () => {
         cy.get('textarea').first().clear()
         cy.get('textarea').first().type("Edit Title post");
+        cy.get('.koenig-editor__editor').clear( { force: true } );
+        cy.get('.koenig-editor__editor').type("Hola Mundo 2");
         cy.wait(2000)
         // cy.screenshot(`caso${caso}/Step-After-${i}`);
     });    
