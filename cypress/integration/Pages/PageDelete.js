@@ -23,7 +23,7 @@ describe('Testing delete Page', () => {
         cy.get('input[name="password"]').type(Cypress.config('password'));
         cy.get('[id="ember12"]').click();
         cy.wait(3000);
-        cy.screenshot(`caso${caso}/Step-After-${i}`);
+        // cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
 
     it('Test go to page', () =>{
@@ -36,7 +36,7 @@ describe('Testing delete Page', () => {
         })
         // cy.get('li[class="gh-list-row gh-posts-list-item ember-view"]').click();
         cy.wait(3000);
-        cy.screenshot(`caso${caso}/Step-After-${i}`);
+        // cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
     
     it('Test click post-settings and delete', () => {
@@ -44,7 +44,7 @@ describe('Testing delete Page', () => {
         cy.wait(1000)
         cy.get('button[class="gh-btn gh-btn-red gh-btn-icon ember-view"]').click();
         cy.wait(3000);
-        cy.screenshot(`caso${caso}/Step-After-${i}`);
+        // cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
    
   })

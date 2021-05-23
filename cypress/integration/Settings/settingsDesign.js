@@ -41,6 +41,7 @@ describe('Testing Settings Design', () => {
         cy.get('input[class="ember-text-field gh-input ember-view"]').eq(9).type('http://localhost:2369/Test-data',{force: true});
         cy.wait(2000);
         cy.get('button[class="gh-blognav-add"]').first().click({force: true});
+        // cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
 
     it('Test type secundary navigation and save', () => {
@@ -54,6 +55,8 @@ describe('Testing Settings Design', () => {
         cy.get('button[class="gh-blognav-add"]').last().click({force: true});
         cy.wait(2000);
         cy.get('button[class="gh-btn gh-btn-blue gh-btn-icon ember-view"]').click({force: true});
+        // cy.screenshot(`caso${caso}/Step-After-${i}`);
+
     })
 
     it('Button Back to site', () => {
