@@ -7,9 +7,8 @@ var i = 0;
 var caso = 1;
 let titles = MOCK_DATA;
 for( let index in titles){
-// for (let index = 0; index < 10; index++) {
 
-describe(`Testing create Page DataPoolApriori ESC Negative ${index + 1}`, () => {
+describe(`Testing create Page DataPoolApriori ESC Negative ${index}`, () => {
     
     before(()=>{
         cy.visit('/')

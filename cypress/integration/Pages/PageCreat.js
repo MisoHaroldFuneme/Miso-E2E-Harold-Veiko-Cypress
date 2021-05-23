@@ -37,7 +37,7 @@ describe('Testing create Page', () => {
     
     it('Test type title and content', () => {
         cy.get('textarea').first().type("Title page");
-        cy.get('.koenig-editor__editor').type("Hola");
+        // cy.get('.koenig-editor__editor').type("Hola");
         cy.wait(2000);
         // cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
