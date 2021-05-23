@@ -53,9 +53,11 @@ context('Testing Create Tag', () => {
         // cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
    
-    it('Button Back to page', () => {
-         cy.get('a[href*="#/tags"]').first().click()
-         // cy.screenshot(`caso${caso}/Step-After-${i}`);
+    it('Button Back to site', () => {
+        cy.get('a[href*="#/site/"]').first().click({force: true})
+        cy.get('a[href*="#/site/"]').first().click({force: true})
+        cy.wait(3000);
+        // cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
      
 })
