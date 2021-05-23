@@ -38,7 +38,7 @@ context('Testing Create Post and Publish', () => {
         //cy.screenshot(`caso${caso}/Step-After-${i}`);
     })
 
-    it('Enter Title', () => {
+    it('Test Enter Title', () => {
         cy.get('textarea').first().type("New Title post");
         cy.wait(1000);
         cy.get('a[href*="#/posts/"]').first().click();
@@ -46,7 +46,7 @@ context('Testing Create Post and Publish', () => {
         //cy.screenshot(`caso${caso}/Step-After-${i}`);
     });       
    
-    it('Publish', () => {        
+    it('Test Publish', () => {        
         cy.get('div[role="button"]').first().click({force: true});
         cy.wait(2000);
         cy.get('button[class="gh-btn gh-btn-blue gh-publishmenu-button gh-btn-icon ember-view"]').click();
