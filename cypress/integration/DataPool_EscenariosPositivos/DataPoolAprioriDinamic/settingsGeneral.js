@@ -1,17 +1,5 @@
 
 
-
-
-// describe(`Testing create Page DataPoolApriori ESC Positivo`, () => {
-
-//     it('Test Login into',async () => {
-//         console.log('hfm', await DataApiSettingsGeneral.getContent());
-//         cy.log("RES CUYPRESS: ",  DataApiSettingsGeneral.response[0].title);
-//         // cy.screenshot(`caso${caso}/Step-After-${i}`);
-//     })
-
-//   })
-
 import ApiSettingsGeneral from './API-Moockaroo/API-SettingsGeneralPositivo.js';
 const cookieSessionName = Cypress.env('cookieSessionName') || "ghost-admin-api-session"
 var i = 0;
