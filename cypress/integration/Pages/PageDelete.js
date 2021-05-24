@@ -1,8 +1,8 @@
 const cookieSessionName = Cypress.env('cookieSessionName') || "ghost-admin-api-session"
 var i = 0;
 var caso = 2;
-
-describe('Testing delete Page', () => {
+for(let i = 1; i <= 5; i++){
+describe(`Testing delete Page ${i}`, () => {
 
     before(()=>{
         cy.visit('/#/signin')
@@ -48,3 +48,4 @@ describe('Testing delete Page', () => {
     })
    
   })
+}
