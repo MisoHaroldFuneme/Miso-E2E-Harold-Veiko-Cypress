@@ -1,8 +1,11 @@
+import MOCK_DATA from './schemas-Mockaroo/settingsIntegrationsPositivo.json';
 const cookieSessionName = Cypress.env('cookieSessionName') || "ghost-admin-api-session"
 var i = 0;
 var caso = 1;
 
-describe('Testing Settings Integration', () => {
+for( let index in MOCK_DATA){
+
+describe(`Testing Settings Integration DataPoolApriori ESC Positivo ${index}`, () => {
 
     before(()=>{
         cy.visit('/#/signin')
@@ -35,17 +38,17 @@ describe('Testing Settings Integration', () => {
     it('Test click add integration', () => {
         cy.get('a[href*="#/settings/integrations/new/"]').click();
         cy.wait(200);
-        cy.get('#new-integration-name').type('Test new integration',{force: true});
+        cy.get('#new-integration-name').type(MOCK_DATA[index].NameNewCustomIntegration,{force: true});
         cy.wait(200);
         cy.get('button[class="gh-btn gh-btn-green gh-btn-icon ember-view"]').click();
-        cy.get('#integration_description').type('Test description integration ',{force: true});
+        cy.get('#integration_description').type(MOCK_DATA[index].DescriptionNewCustomIntegration,{force: true});
         cy.wait(200);
         cy.get('.ml1').click();
-        cy.get('#webhook-name').type('Test new webhoook name',{force: true});
+        cy.get('#webhook-name').type(MOCK_DATA[index].NameNewwebhook,{force: true});
         cy.wait(700);
         cy.get('select').select('post.added',{force: true});
         cy.wait(700);
-        cy.get('#webhook-targetUrl').type('http://localhost:2368/ghost/#/settings/integrations/webhooks/newTest',{force: true});
+        cy.get('#webhook-targetUrl').type(MOCK_DATA[index].URL,{force: true});
         cy.wait(700);
         cy.get('button[class="gh-btn gh-btn-green gh-btn-icon ember-view"]').click({force: true});
         cy.wait(3000);
@@ -77,3 +80,4 @@ describe('Testing Settings Integration', () => {
     })
    
   })
+}
