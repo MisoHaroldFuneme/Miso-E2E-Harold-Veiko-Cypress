@@ -1,4 +1,4 @@
-import MOCK_DATA from './schemas-Mockaroo/PageCreateNegative.json'
+import MOCK_DATA from './schemas-Mockaroo/PageCreatePositivo.json'
 const cookieSessionName = Cypress.env('cookieSessionName') || "ghost-admin-api-session";
 const faker = require('faker');
 
@@ -8,7 +8,7 @@ var caso = 1;
 let titles = MOCK_DATA;
 for( let index in titles){
 
-describe(`Testing create Page DataPoolApriori ESC Negative ${index}`, () => {
+describe(`Testing create Page DataPoolApriori ESC Positivo ${index}`, () => {
     
     before(()=>{
         cy.visit('/')
