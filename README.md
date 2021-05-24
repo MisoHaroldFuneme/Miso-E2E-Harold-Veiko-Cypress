@@ -1,3 +1,20 @@
+
+## SEMANA 7
+# WIKI: 
+- - https://github.com/MisoHaroldFuneme/Miso-E2E-Harold-Veiko-Cypress/wiki/SEMANA-7---ESTRATEGIAS-USADAS-EN-LAS-PRUEBAS
+
+# EJECUCION DE CYPRESS
+Para la ejecución de cypress es necesario modificar el archivo **cypress.json** en:
+![Configuracion de cypress.json](https://github.com/MisoHaroldFuneme/Miso-E2E-Harold-Veiko-Cypress/blob/main/ConfigCypress.PNG)
+
+- Modificar el puerto de la web ghost, esto se realiza en **baseUrl**.
+- Modificar el usuario por el que tienen registrado en ghost, esto se realiza en **user**.
+- Modificar el password del usuario configurado en el paso anterior, esto se realiza en **password**.
+
+
+
+## SEMANAS ANTERIORES
+
 # Miso-E2E-Harold-Veiko-Cypress
 
 Proyecto en el que se ejecutaran escenarios en la aplicación Ghost con la herramienta Cypress con el fin de contrastar sus utilidades frente a la herramienta Kraken
@@ -50,16 +67,5 @@ A continuación se deben seguir esto pasos para configurar cypress:
 - 4-) Podrá ver cuáles escenarios fueron exitosos, y posteriormente, desde un explorador de archivos podrá ver el directorio videos y el directorio screenshots, donde se guardan las capturas realizadas durante la prueba (en este caso, ninguna). El video que se genera es una grabación de lo que usted vería en el navegador si se ejecutara en modo headed.
 
 
-## SEMANA 7
-# WIKI: 
-- - https://github.com/MisoHaroldFuneme/Miso-E2E-Harold-Veiko-Cypress/wiki/SEMANA-7---ESTRATEGIAS-USADAS-EN-LAS-PRUEBAS
-
-# EJECUCION DE CYPRESS
-Para la ejecución de cypress es necesario modificar el archivo **cypress.json** en:
-![Configuracion de cypress.json](https://github.com/MisoHaroldFuneme/Miso-E2E-Harold-Veiko-Cypress/blob/main/ConfigCypress.PNG)
-
-- Modificar el puerto de la web ghost, esto se realiza en **baseUrl**.
-- Modificar el usuario por el que tienen registrado en ghost, esto se realiza en **user**.
-- Modificar el password del usuario configurado en el paso anterior, esto se realiza en **password**.
 
 
